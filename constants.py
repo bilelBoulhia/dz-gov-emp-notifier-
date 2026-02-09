@@ -1,4 +1,9 @@
+import os
+import tempfile
+
 URL = "http://www.concours-fonction-publique.gov.dz/ar/Liste.asp"
+
+
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0",
@@ -13,6 +18,10 @@ day_limit=15
 license=4
 master=2
 
+bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
+channel_id = os.getenv("TELEGRAM_CHANNEL_ID")
+telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+tmp_dir = tempfile.gettempdir()
 
-master_json = "Master_offers.json"
-license_json = "License_offers.json"
+license_json = os.path.join(tmp_dir, "license.json")
+master_json  = os.path.join(tmp_dir, "master.json")
