@@ -1,6 +1,6 @@
-from offer import fetch_offers
-from constants import license, master, master_json, license_json
-from utils import add
+from constants import master, master_json,license_json,license
+from core.offer import fetch_offers
+from core.utils import add
 
 configs = [
     (license, license_json, "license"),
