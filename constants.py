@@ -1,9 +1,9 @@
 import os
 import tempfile
-
+from dotenv import load_dotenv
 URL = "http://www.concours-fonction-publique.gov.dz/ar/Liste.asp"
 
-
+load_dotenv()
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0",
@@ -18,8 +18,8 @@ day_limit=15
 license=4
 master=2
 
-bot_token = os.getenv("TELEGRAM_BOT_TOKEN")
-channel_id = os.getenv("TELEGRAM_CHANNEL_ID")
+bot_token = os.getenv("BOT_TOKEN")
+channel_id = os.getenv("CHANNEL_ID")
 telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
 tmp_dir = tempfile.gettempdir()
 
