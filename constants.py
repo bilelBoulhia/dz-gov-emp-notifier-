@@ -25,3 +25,6 @@ tmp_dir = tempfile.gettempdir()
 
 license_json = os.path.join(tmp_dir, "license.json")
 master_json  = os.path.join(tmp_dir, "master.json")
+
+
+cache_dir = os.path.expanduser("~/.cache/notifier")

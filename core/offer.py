@@ -14,7 +14,7 @@ from constants import (
 class JobOffer:
     def __init__(self, title):
         self.title = title
-        self.sent = False
+
         self.fields = {}
 
     def set(self, key, value):
@@ -44,7 +44,6 @@ class JobOffer:
         return {
             "id": self._id(),
             "title": self.title,
-            "sent": self.sent,
             **self.fields
         }
 
